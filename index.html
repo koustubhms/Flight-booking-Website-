@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    
+<div class="background"></div>
+<div class="content">
+    <header>
+        <h1>Book Now</h1>
+    </header><br><br>
+        
+    <section class="container">
+        <div class="section1">
+            <div class="head">
+
+                <h3>Booking details</h3><br>
+
+            </div>
+            <div class="section1-main">
+                <div class="block1">
+                    <span>Origin</span>
+                    <select type="text" id="txt1" placeholder="IATA CODE"></select><br><br>
+                </div>
+                    <span>✈</span>
+                <div class="block2">
+                    <span>Destination</span>
+                    <select type="text" id="txt2"  placeholder="IATA CODE" required></select><br><br>
+                </div>
+                <div class="block3">
+                    <span>Departure date</span>
+                    <input type="date" id="date">
+                </div>
+                <div class="block4">
+                    <span> Return date</span>
+                    <input type="date" id="date">
+                </div><br>
+                <div class="block5">
+                    <span>  Trip class</span>
+                    <select name="class" id="class">
+                        <option value="Economic class-0">Economic class-0</option>
+                        <option value="Bussiness Class-1">Bussiness Class-1</option>
+                        <option value="First class-2">First class-2</option>
+                    </select>
+                    <br><br>
+                </div>
+                <div class="block6">
+                    <span>&ensp;&ensp; No of Passengers</span>
+                    <input type="number" >
+                    <br><br>
+                </div>
+                <button onclick="show()" class="btn">Search</button>
+            </div>
+            
+            
+            
+            
+        </div>
+            
+        
+    </section>
+</div>
+<div class="table-content">
+
+<table class="table" id="show-data"></table>
+</div>
+
+    
+
+
+    
+</body>
+</html>

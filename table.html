@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Hotel</title>
+    
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <header>
+            <h1>BookNow</h1>
+        </header>
+        <section class="container">
+            <div class="section2">
+                <div class="head">
+                    <h3>PASSENGER DETAILS</h3><br>
+                </div>
+                <div class="section2-main">
+                    <form name="myform" autocomplete="off" onsubmit="return validation(event)">
+                        <div class="blk1">
+                            <span>TITLE</span>
+                            <select name="title" id="title">
+                                <option value="Mr.">Mr.</option>
+                                <option value="Ms.">Ms.</option>
+                            </select><br><br>
+                        </div>
+                        <div class="blk2">
+                            <label for="name"> NAME:</label>
+                            <input type="text" id="fname" name="fname" placeholder="first name" required>
+                            <div id="error1"></div><br><br>
+                        </div>
+                        <div class="blk3">
+                            <label for="surname">SURNAME:</label>
+                            <input type="text" id="lname" placeholder="Last name" required>
+                            <div id="error2"></div><br><br>
+                        </div>
+                        <div class="blk4">
+                            <label for="dob">DATE OF BIRTH:</label>
+                            <input type="date" id="dob" required><br><br>
+                        </div>
+                       
+                        <div class="blk5">
+                            <label for="email">EMAIL-ADDRESS:</label>
+                            <input type="email" id="email" placeholder="email-address" required><br><br>
+                        </div>
+                        <div class="blk6">
+                            <label for="telephone">TELEPHONE NUMBER:</label>
+                            <input type="text" maxlength="10" placeholder="Mobile number" required><br><br>
+                        </div>
+                        <input type="submit" class="btn" value="Submit">
+                    </form>
+                
+                </div>
+            
+            </div> 
+
+        </section>
+    </div>
+    <script>
+        var fname=document.getElementById("fname");
+        var Lname=document.getElementById("lname");
+        var errors1=document.querySelector("#error1");
+        var errors2=document.querySelector("#error2");
+        var letters=/^[A-Za-z]*$/;
+        function validation(e){
+            e.preventDefault();
+            
+            if(!fname.value.match(letters)){
+                alert("red");
+                errors1.textContent="only alphabets are allowed";
+                fname.style.borderColor="red";
+                errors1.style.display="block";
+                errors1.style.fontSize="10px";
+                errors1.style.paddingLeft="20px";
+                errors1.style.color="red";
+                return false;
+             }
+             else if(!Lname.value.match(letters)){
+                alert("ed");
+             errors2.textContent="only alphabets are allowed";
+                 Lname.style.borderColor="red";
+                 errors2.style.display="block";
+                 errors2.style.fontSize="10px";
+                 errors2.style.color="red";
+                 return false;
+         }
+         return true;
+        }
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

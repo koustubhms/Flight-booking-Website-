@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.content{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+.background{
+    /* The image used */
+  background-image: url('plane.jpg');
+  
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
+  /* Full height */
+  height: 100vh; 
+  width: 100vw;
+  /* Center image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover; 
+}
+/* .result{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+/* .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 5rem;
+}*/
+.section1{
+    display: flex;
+    flex-direction: column;
+    
+}/*
+.section1-main{
+    display: grid;
+    grid-template-columns: 225px 225px;
+    column-gap: 30px;
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+} */
+.btn{
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    border-color: white;
+    cursor: pointer;
+}
+#error1{
+    display: none;
+}
+#error2{
+    display: none;
+}
+.section1-main{
+    display: grid;
+    grid-template-columns: 300px 60px 300px;
+    justify-content: center;
+}
+.block4{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-left: 30px;
+}
+.block6{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-left: 30px;
+}
+
+.block3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+}
+.section1-main button{
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+.block5{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-items: center;
+}
+#show-data{
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.table-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6890b9;
+}
+tr{
+    text-align: center;
+}
+#show-data td{
+    border: 1px solid white;
+    padding: 8px;
+    
+}
+#show-data th{
+    border: 1px solid white;
+    padding: 8px;
+    background-color: #c0bce3;
+}
+.blk1{
+    padding-right: 5rem;
+}
+.blk2{
+    padding-left: 1.5rem;
+}
+.blk4{
+    padding-right:4rem ;
+}
+.blk5{
+    padding-right: 3rem;
+}
+.blk6{
+    padding-right: 5rem;
+}
+@media screen and (max-width:860px) {
+    .blk1{
+        display: flex;
+        flex-direction: column;
+    }
+    .blk1 span{
+        text-align: left;
+    }
+    .blk2{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+    }
+    .blk2 label{
+        text-align: left;
+    }
+    .blk4{
+        display: flex;
+        flex-direction: column;
+    }
+    .blk4 label{
+        text-align: left;
+    }
+    .blk5{
+        display: flex;
+        flex-direction: column;
+    }
+    .blk5 label{
+        text-align: left;
+    }
+    .blk6{
+        display: flex;
+        flex-direction: column;
+    }
+    .blk6 label{
+        text-align: left;
+    }
+    .blk3{
+        display: flex;
+        flex-direction: column;
+    }
+    .blk3 label{
+        text-align: left;
+    }
+    .section1-main{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .block1{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .block2{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .block3{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .block4{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .block5{
+        display: flex;
+        flex-direction: column;
+        height: 60px;
+    }
+    .block1 span{
+        text-align: left;
+    }
+    .block2 span{
+        text-align: left;
+    }
+    .block3 span{
+        text-align: left;
+    }
+    .block4 span{
+        text-align: left;
+    }
+    .block5 span{
+        text-align: left;
+    }
+    .block6{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0%;
+    }
+    .block6 span{
+        text-align: left;
+    }
+    body{
+        overflow-x:hidden ;
+        width: fit-content;
+    };
+    .background{
+        width: fit-content;
+    } 
+    .table thead{
+        display: none;
+    }
+    .table,.table tbody,.table tr,.table td{
+        display: block;
+        width: 100%;
+
+    }
+    .table tr{
+        margin-bottom: 30px;
+    }
+    .table tbody tr td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .table td::before{
+        content:attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size:15px ;
+        font-weight: bold;
+        text-align: left;
+    }
+}
